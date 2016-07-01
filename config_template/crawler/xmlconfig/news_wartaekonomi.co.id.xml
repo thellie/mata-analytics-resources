@@ -1,0 +1,38 @@
+<properties>
+    <body>
+        <xpathpostcontents>.news-content</xpathpostcontents>
+        <replacepostcontents/>
+    </body>
+    <id>
+        <xpathpostids>.view-berita &gt; h3:nth-child(1)</xpathpostids>
+        <patternpostids/>
+        <replacepostids/>
+    </id>
+    <source>
+        <crawlname>wartaekonomi.co.id</crawlname>
+    </source>
+    <date>
+        <xpathdates>.view-berita &gt; p:nth-child(3)</xpathdates>
+        <dateformat>ddMMMMyyyyHH:mm</dateformat>
+        <replacedates/>
+        <attribute/>
+    </date>
+    <user>
+        <xpathusers>.news-author</xpathusers>
+        <replaceusers/>
+    </user>
+    <header>
+        <xpathheader>.view-berita &gt; h3:nth-child(1)</xpathheader>
+        <replaceheader/>
+    </header>
+    <linkfollow>
+        <patternlink/>
+        <patternnextpage/>
+    </linkfollow>
+    <outputdir>
+        <outputdir/>
+    </outputdir>
+    <manualcrawl>
+        <booleanmanual>false</booleanmanual>
+    </manualcrawl>
+</properties>

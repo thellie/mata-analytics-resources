@@ -1,0 +1,28 @@
+<properties>
+<id>
+    <xpathpostids>div[id~=edit]</xpathpostids>
+    <replacepostids>&lt;table class="tborder" id="post|"</replacepostids>
+    <patternpostids>&lt;table class="tborder" id="post(.*?)"</patternpostids>
+  </id>
+  <body>
+    <xpathpostcontents>div[id~=post_message_]</xpathpostcontents>
+    <replacepostcontents/>
+  </body>
+  <source>
+    <crawlname>Detiks Forum Sequislife</crawlname>
+  </source>
+  <date>
+    <xpathdates>table[id~=post] &gt; tbody:nth-child(1) &gt; tr:nth-child(1) &gt; td:nth-child(1)</xpathdates>
+    <dateformat>ddMMMMyyyyHH:mm</dateformat>
+    <attribute/>
+    <replacedates> |,</replacedates>
+  </date>
+  <user>
+    <xpathusers>div[id~=postmenu_] &gt; a:nth-child(1)</xpathusers>
+    <replaceusers/>
+  </user>
+  <header>
+    <replaceheader/>
+    <xpathheader>td.navbar &gt; strong:nth-child(2)</xpathheader>
+  </header>
+</properties>

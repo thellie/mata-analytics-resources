@@ -1,0 +1,38 @@
+<properties>
+	<body>
+		<replacepostcontents/>
+		<xpathpostcontents>#main > div.container-article > div > article > div.read-page--content</xpathpostcontents>
+	</body>
+	<id>
+		<xpathpostids>#main > div.container-article > div > article > header.read-page--header > h1</xpathpostids>
+		<patternpostids/>
+		<replacepostids/>
+	</id>
+	<source>
+		<crawlname>Liputan6 News</crawlname>
+	</source>
+	<date>
+		<xpathdates>#main > div.container-article > div > article > header.read-page--header > div.read-page--header--author > div > p > time</xpathdates>
+		<dateformat>yyyy-MM-ddHH:mm:ss</dateformat>
+		<replacedates></replacedates>
+		<attribute>datetime</attribute>
+	</date>
+	<user>
+		<xpathusers>#main > div.container-article > div > article > header.read-page--header > div.read-page--header--author > div > a > span</xpathusers>
+		<replaceusers>kompas.com /|kompas.com/|(.*?),|: </replaceusers>
+	</user>
+	<header>
+		<replaceheader/>
+		<xpathheader>#main > div.container-article > div > article > header.read-page--header > h1</xpathheader>
+	</header>
+	<linkfollow>
+		<patternlink></patternlink>
+		<patternnextpage></patternnextpage>
+	</linkfollow>
+	<outputdir>
+		<outputdir></outputdir>
+	</outputdir>
+	<manualcrawl>
+		<booleanmanual>false</booleanmanual>
+	</manualcrawl>
+</properties>

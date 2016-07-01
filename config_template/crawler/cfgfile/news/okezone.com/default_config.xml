@@ -1,0 +1,38 @@
+<properties>
+	<body>
+		<replacepostcontents/>
+		<xpathpostcontents>#contentx</xpathpostcontents>
+	</body>
+	<id>
+		<xpathpostids>body > div.container.container-body-wp > div.col-md-8.col-md-body-left.no-padding > div.news-title > h1</xpathpostids>
+		<patternpostids/>
+		<replacepostids/>
+	</id>
+	<source>
+		<crawlname>Okezone News</crawlname>
+	</source>
+	<date>
+		<xpathdates>body > div.container.container-body-wp > div.col-md-8.col-md-body-left.no-padding > div.meta-post > p > time</xpathdates>
+		<dateformat>ddMMMMyyyy-HH:mm</dateformat>
+		<replacedates>(.*?),</replacedates>
+		<attribute/>
+	</date>
+	<user>
+		<xpathusers>body > div.container.container-body-wp > div.col-md-8.col-md-body-left.no-padding > div.news-detail > div.author-and-share > div.author > div.nmreporter > div</xpathusers>
+		<replaceusers></replaceusers>
+	</user>
+	<header>
+		<replaceheader/>
+		<xpathheader>body > div.container.container-body-wp > div.col-md-8.col-md-body-left.no-padding > div.news-title > h1</xpathheader>
+	</header>
+	<linkfollow>
+		<patternlink></patternlink>
+		<patternnextpage></patternnextpage>
+	</linkfollow>
+	<outputdir>
+		<outputdir></outputdir>
+	</outputdir>
+	<manualcrawl>
+		<booleanmanual>false</booleanmanual>
+	</manualcrawl>
+</properties>

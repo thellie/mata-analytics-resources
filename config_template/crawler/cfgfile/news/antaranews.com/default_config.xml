@@ -1,0 +1,3 @@
+<properties>
+<body><replacepostcontents/><xpathpostcontents>#content_news</xpathpostcontents></body><source><crawlname>test1</crawlname></source><date><xpathdates>div.date &gt; time:nth-child(1)</xpathdates><dateformat>ddMMMMyyyyHH:mm</dateformat><attribute/><replacedates>(.*?),</replacedates></date><user><xpathusers>.byline &gt; span:nth-child(1)</xpathusers><replaceusers>(.*?):</replaceusers></user><header><replaceheader/><xpathheader>.title &gt; strong:nth-child(1)</xpathheader></header>
+</properties>

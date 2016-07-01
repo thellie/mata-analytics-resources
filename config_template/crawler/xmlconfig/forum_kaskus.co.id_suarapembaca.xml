@@ -1,0 +1,28 @@
+<properties>
+<id>
+    <xpathpostids>div.listing-wrapper&gt;div[itemscope]</xpathpostids>
+    <replacepostids>&lt;div class="row [a-z]+\-post" id="|"&gt;</replacepostids>
+    <patternpostids>&lt;div class="row [a-z]+\-post" id="post(.*?)"&gt;</patternpostids>
+  </id>
+  <body>
+    <xpathpostcontents>div.entry-body&gt;div.entry</xpathpostcontents>
+    <replacepostcontents/>
+  </body>
+  <source>
+    <crawlname>Surat Pembaca Kaskus Sequislife</crawlname>
+  </source>
+  <date>
+    <xpathdates>div.user-details&gt;time.entry-date</xpathdates>
+    <dateformat>yyyy-MM-ddHH:mm:ss</dateformat>
+    <attribute>datetime</attribute>
+    <replacedates>T</replacedates>
+  </date>
+  <user>
+    <xpathusers>div.user-details&gt;div.user-name&gt;a.nickname</xpathusers>
+    <replaceusers/>
+  </user>
+  <header>
+    <replaceheader/>
+    <xpathheader>div.breadcrumbs&gt;div.current</xpathheader>
+  </header>
+</properties>

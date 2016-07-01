@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><taeDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+  <delegateAnalysisEngine key="LangID0">
+            <import location="LangID0.xml"/>
+        </delegateAnalysisEngine>
+        <delegateAnalysisEngine key="LWAnnotator1">
+            <import location="LWAnnotator1.xml"/>
+        </delegateAnalysisEngine>
+        <delegateAnalysisEngine key="LWShallowParser3">
+            <import location="LWShallowParser3.xml"/>
+        </delegateAnalysisEngine>
+        <delegateAnalysisEngine key="TypeCleanup5">
+            <import location="TypeCleanup5.xml"/>
+        </delegateAnalysisEngine>
+    </delegateAnalysisEngineSpecifiers>
+  <flowController key="lrwFlowController">
+    <flowControllerDescription>
+    	<frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+		  <implementationName>com.ibm.dltj.uima_annotator.flow.LrwPearFlowController</implementationName>
+			<processingResourceMetaData>
+			  <name>LRWFlowController</name>
+				<description>LRW PEAR export flow controller</description>
+			  <configurationParameters defaultGroup="0" searchStrategy="none">
+ 					<commonParameters>
+     				<configurationParameter>
+      				<name>RunIds</name>
+      				<type>String</type>
+      				<multiValued>true</multiValued>
+      				<mandatory>true</mandatory>
+      			</configurationParameter>
+				    <configurationParameter>
+      				<name>ConditionType</name>
+       				<type>String</type>
+      			  <multiValued>false</multiValued>
+      				<mandatory>false</mandatory>
+    				</configurationParameter>
+				    <configurationParameter>
+      				<name>ConditionFeature</name>
+				      <type>String</type>
+      				<multiValued>false</multiValued>
+      				<mandatory>false</mandatory>
+    				</configurationParameter>
+			      <configurationParameter>
+      				<name>ConditionValues</name>
+ 				      <type>String</type>
+      				<multiValued>true</multiValued>
+      				<mandatory>false</mandatory>
+    				</configurationParameter>
+					</commonParameters>
+					<configurationGroup names="0 1"/>
+				</configurationParameters>
+				<configurationParameterSettings>
+				<settingsForGroup name="1">
+                        <nameValuePair>
+                            <name>RunIds</name>
+                            <value>
+                                <array>
+                                    <string>LangID0</string>
+                                    <string>LWAnnotator1</string>
+                                    <string>LWShallowParser3</string>
+                                    <string>TypeCleanup5</string>
+                                </array>
+                            </value>
+                        </nameValuePair>
+                    </settingsForGroup>
+                    <settingsForGroup name="0">
+                        <nameValuePair>
+                            <name>RunIds</name>
+                            <value>
+                                <array>
+                                    <string>*1</string>
+                                </array>
+                            </value>
+                        </nameValuePair>
+                    </settingsForGroup>
+                </configurationParameterSettings>
+			</processingResourceMetaData>
+			<externalResourceDependencies>
+			</externalResourceDependencies>
+			<resourceManagerConfiguration>
+			</resourceManagerConfiguration>
+    </flowControllerDescription>
+  </flowController>
+  <analysisEngineMetaData>
+    <name>Aggregate LanguageWare TextAnalysisEngine</name>
+    <description>Aggregate LanguageWare analysis engine</description>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <capabilities>
+		<capability>
+			<inputs/>
+			<outputs>
+                    <type>com.mata.genanno.ID_City</type>
+                    <type>com.mata.genanno.ID_Country</type>
+                    <type>com.mata.genanno.ID_Province</type>
+                    <type>com.mata.genanno.ID_CC_Prefix_Location</type>
+                    <type>com.mata.genanno.ID_Prefix_Location</type>
+                    <type>com.mata.genanno.ID_Prefix_Name</type>
+                    <type>com.mata.genanno.ID_Prefix_Organization</type>
+                    <type>com.mata.genanno.Negation</type>
+                    <type>com.mata.genanno.Sentiment</type>
+                    <type>com.mata.genanno.SentimentKeywords</type>
+                    <type>com.mata.genanno.Domain_Suffix</type>
+                    <type>com.mata.genanno.ID_Suffix_Name</type>
+                    <type>com.mata.genanno.ID_Suffix_Organization</type>
+                    <type>com.mata.genanno.Month</type>
+                    <type>com.mata.genanno.Names</type>
+                    <type>com.mata.genanno.Date</type>
+                    <type>com.mata.genanno.Phone_Number</type>
+                    <type>com.mata.genanno.Mention</type>
+                    <type>com.mata.genanno.Email</type>
+                    <type>com.mata.genanno.Hashtag</type>
+                    <type>com.mata.genanno.Url</type>
+                    <type>com.mata.genanno.NegativeSmiley</type>
+                    <type>com.mata.genanno.PositiveSmiley</type>
+                    <type>com.mata.genanno.UsernameStartUnderscore</type>
+                    <type>com.mata.genanno.UsernameMidUnderscore</type>
+                    <type>com.mata.genanno.UsernameEndUnderscore</type>
+                    <type>com.ibm.lw.marker.MarkerDateParseOutputType</type>
+                    <type>com.ibm.lw.marker.MarkerTimeParseOutputType</type>
+                    <type>com.mata.genanno.TimeParse</type>
+                    <type>com.ibm.lw.marker.MarkerLocationCityOutputType</type>
+                    <type>com.mata.genanno.LocationCity</type>
+                    <type>com.ibm.lw.marker.MarkerLocationCountryOutputType</type>
+                    <type>com.mata.genanno.LocationCountry</type>
+                    <type>com.ibm.lw.marker.MarkerLocationParseOutputType</type>
+                    <type>com.mata.genanno.LocationParse</type>
+                    <type>com.ibm.lw.marker.MarkerLocationProvinceOutputType</type>
+                    <type>com.mata.genanno.LocationProvince</type>
+                    <type>com.ibm.lw.marker.MarkerSentimentL1OutputType</type>
+                    <type>com.mata.genanno.OpinionPhraseLevel1</type>
+                    <type>com.ibm.lw.marker.MarkerSentimentL2OutputType</type>
+                    <type>com.mata.genanno.OpinionPhraseLevel2</type>
+                    <type>OpinionPhrase</type>
+                    <type>com.ibm.lw.marker.MarkerSentimentOutputType</type>
+                    <type>com.ibm.lw.marker.MarkerSentimentParseOutputType</type>
+                    <type>com.mata.genanno.SentimentParse</type>
+                    <type>com.ibm.lw.marker.MarkerMentionParseOutputType</type>
+                    <type>com.mata.genanno.MentionParse</type>
+                    <type>com.ibm.lw.marker.MarkerNameParseOutputType</type>
+                    <type>com.mata.genanno.NameParse</type>
+                    <type>com.ibm.lw.marker.MarkerOrganizationParseOutputType</type>
+                    <type>com.mata.genanno.OrganizationParse</type>
+                    <type>com.ibm.lw.marker.MarkerPhoneNumberParseOutputType</type>
+                    <type>com.mata.genanno.PhoneParse</type>
+                    <type>com.ibm.lw.marker.MarkerHashtagParseOutputType</type>
+                    <type>com.mata.genanno.HashtagParse</type>
+                    <type>com.ibm.lw.marker.MarkerImportantPhraseOutputType</type>
+                    <type>com.mata.genanno.NAdjPhrase</type>
+                    <type>com.mata.genanno.NNPhrase</type>
+                    <type>uima.tt.TokenAnnotation</type>
+                    <type>uima.tt.Lemma</type>
+                    <feature>uima.tt.TokenAnnotation:posTag</feature>
+                    <feature>uima.tcas.DocumentAnnotation:language</feature>
+                    <feature>uima.tt.TokenAnnotation:lemmaEntries</feature>
+                    <feature>uima.tt.Lemma:key</feature>
+                    <feature>uima.tt.Lemma:frost_ExtendedPOS</feature>
+                    <feature>uima.tt.Lemma:partOfSpeech</feature>
+                    <feature>uima.tt.SentenceAnnotation:sentenceNumber</feature>
+                    <feature>uima.tt.TokenAnnotation:lemma</feature>
+                    <feature>uima.tcas.DocumentAnnotation:languageCandidates</feature>
+                    <feature>uima.tt.ParagraphAnnotation:paragraphNumber</feature>
+                    <type>uima.tt.ParagraphAnnotation</type>
+                    <feature>uima.tt.TokenAnnotation:dictionaryMatch</feature>
+                    <type>uima.tt.CompPartAnnotation</type>
+                    <type>uima.tt.SentenceAnnotation</type>
+                </outputs>
+		<languagesSupported>
+                    <language>x-unspecified</language>
+                </languagesSupported>
+            </capability>
+	</capabilities>
+	
+	<operationalProperties>
+		 <modifiesCas>true</modifiesCas>
+		 <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+		 <outputsNewCASes>false</outputsNewCASes>
+	</operationalProperties>
+	   
+  </analysisEngineMetaData>
+</taeDescription>

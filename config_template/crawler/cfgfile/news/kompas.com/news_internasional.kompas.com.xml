@@ -1,0 +1,38 @@
+<properties>
+	<body>
+		<xpathpostcontents>.kcm-read-text</xpathpostcontents>
+		<replacepostcontents>.*KOMPAS.com [\W] </replacepostcontents>
+	</body>
+	<id>
+		<xpathpostids>.kcm-read-top &gt; h2</xpathpostids>
+		<patternpostids></patternpostids>
+		<replacepostids></replacepostids>
+	</id>
+	<source>
+		<crawlname>internasional.kompas.com</crawlname>
+	</source>
+	<date>
+		<xpathdates>.kcm-date</xpathdates>
+		<dateformat>ddMMMMyyyyHH:mm</dateformat>
+		<replacedates>^.*,|\||WIB</replacedates>
+		<attribute></attribute>
+	</date>
+	<user>
+		<xpathusers>table.grey &gt; tbody:nth-child(1) &gt; tr:nth-child(1) &gt; td:nth-child(2)</xpathusers>
+		<replaceusers>: </replaceusers>
+	</user>
+	<header>
+		<xpathheader>.kcm-read-top &gt; h2</xpathheader>
+	<replaceheader></replaceheader>
+		</header>
+	<linkfollow>
+		<patternlink>http://(.*?).kompas.com/read/.*</patternlink>
+		<patternnextpage>http://search.kompas.com/.*</patternnextpage>
+	</linkfollow>
+	<outputdir>
+		<outputdir>D:\Collections\Kemenlu\Kompas</outputdir>
+	</outputdir>
+	<manualcrawl>
+		<booleanmanual>false</booleanmanual>
+	</manualcrawl>
+</properties>

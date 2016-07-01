@@ -1,0 +1,38 @@
+<properties>
+    <body>
+        <xpathpostcontents>.entrytext</xpathpostcontents>
+        <replacepostcontents/>
+    </body>
+    <id>
+        <xpathpostids>.page-title</xpathpostids>
+        <patternpostids/>
+        <replacepostids/>
+    </id>
+    <source>
+        <crawlname>swa.co.id</crawlname>
+    </source>
+    <date>
+        <xpathdates>.post-date &gt; a:nth-child(1)</xpathdates>
+        <dateformat>MMMMdd,yyyy</dateformat>
+        <replacedates/>
+        <attribute/>
+    </date>
+    <user>
+        <xpathusers>span.post-author &gt; a:nth-child(1)</xpathusers>
+        <replaceusers/>
+    </user>
+    <header>
+        <xpathheader>.page-title</xpathheader>
+        <replaceheader/>
+    </header>
+    <linkfollow>
+        <patternlink/>
+        <patternnextpage/>
+    </linkfollow>
+    <outputdir>
+        <outputdir/>
+    </outputdir>
+    <manualcrawl>
+        <booleanmanual>false</booleanmanual>
+    </manualcrawl>
+</properties>

@@ -1,0 +1,38 @@
+<properties>
+	<body>
+		<replacepostcontents/>
+		<xpathpostcontents>#detikcontent > div.kiri > div.sub_kiri.clearfik > div.content_detail > div.text_detail.minwidth > p</xpathpostcontents>
+	</body>
+	<id>
+		<xpathpostids>#detikcontent > div.kiri > div.sub_kiri.clearfik > div.content_detail > h1</xpathpostids>
+		<patternpostids/>
+		<replacepostids/>
+	</id>
+	<source>
+		<crawlname>Detik News</crawlname>
+	</source>
+	<date>
+		<xpathdates>#detikcontent > div.kiri > div.sub_kiri.clearfik > div.content_detail > div.author > span</xpathdates>
+		<dateformat>dd/MM/yyyyHH:mm:ss</dateformat>
+		<replacedates>WIB|WIT|WITA|^(.*),</replacedates>
+		<attribute/>
+	</date>
+	<user>
+		<xpathusers>#detikcontent > div.kiri > div.sub_kiri.clearfik > div.content_detail > div.author > a > strong</xpathusers>
+		<replaceusers/>
+	</user>
+	<header>
+		<replaceheader/>
+		<xpathheader>#detikcontent > div.kiri > div.sub_kiri.clearfik > div.content_detail > h1</xpathheader>
+	</header>
+	<linkfollow>
+		<patternlink>http://(.*?).detik.com/read/.*</patternlink>
+		<patternnextpage>http://search.detik.com/search\?query=jokowi\+prabowo.*</patternnextpage>
+	</linkfollow>
+	<outputdir>
+		<outputdir>d:/Collections/BIN/detiknews</outputdir>
+	</outputdir>
+	<manualcrawl>
+		<booleanmanual>false</booleanmanual>
+	</manualcrawl>
+</properties>

@@ -1,0 +1,643 @@
+{
+  "title": "MAX DASHBOARD",
+  "services": {
+    "query": {
+      "ids": [
+        0
+      ],
+      "list": {
+        "0": {
+          "id": 0,
+          "alias": "",
+          "color": "#7EB26D",
+          "pin": false,
+          "query": "*:*",
+          "type": "lucene"
+        }
+      },
+      "idQueue": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "filter": {
+      "ids": [
+        1,
+        0
+      ],
+      "list": {
+        "0": {
+          "from": "NOW/DAY-30DAY",
+          "to": "NOW/DAY%2B1DAY",
+          "field": "date",
+          "type": "time",
+          "fromDateObj": "2015-03-21T06:54:49.144Z",
+          "toDateObj": "2015-04-20T06:54:49.144Z",
+          "mandate": "must",
+          "active": true,
+          "alias": "",
+          "id": 0
+        },
+        "1": {
+          "id": 1,
+          "mandate": "must",
+          "alias": "",
+          "query": "geoname:*",
+          "active": true,
+          "type": "querystring"
+        }
+      },
+      "idQueue": [
+        2,
+        3
+      ]
+    }
+  },
+  "index": {
+    "default": "_all",
+    "interval": "none",
+    "pattern": "[logstash-]YYYY.MM.DD",
+    "_default": "INDEX_MISSING"
+  },
+  "style": "light",
+  "loader": {
+    "load_gist": true,
+    "save_default": true,
+    "save_elasticsearch": true,
+    "save_gist": true,
+    "save_temp_ttl": "30d",
+    "hide": false,
+    "load_local": true,
+    "load_elasticsearch_size": 20,
+    "load_elasticsearch": true,
+    "save_temp": true,
+    "save_temp_ttl_enable": true,
+    "dropdown_collections": true,
+    "save_local": true
+  },
+  "failover": false,
+  "panel_hints": true,
+  "solr": {
+    "global_params": "",
+    "core_list": [
+      "IOCBandung"
+    ],
+    "core_name": "IOCBandung",
+    "last_core_name": "IOCBandung",
+    "server": "/api/analytics/"
+  },
+  "editable": true,
+  "rows": [
+    {
+      "title": "Query",
+      "height": "50px",
+      "panels": [
+        {
+          "history": [
+            "*:*",
+            "geoname:*",
+            "coordinate:*"
+          ],
+          "remember": 10,
+          "title": "Search",
+          "error": false,
+          "loadingEditor": false,
+          "query": "*:*",
+          "pinned": true,
+          "type": "query",
+          "spyable": true,
+          "editable": true,
+          "span": 9
+        },
+        {
+          "tilt": false,
+          "loadingEditor": false,
+          "donut": false,
+          "labels": true,
+          "spyable": false,
+          "type": "hits",
+          "editable": true,
+          "title": "Total Hits",
+          "arrangement": "horizontal",
+          "show_queries": false,
+          "style": {
+            "font-size": "24pt"
+          },
+          "chart": "total",
+          "queries": {
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=date:[NOW/DAY-30DAY%20TO%20NOW/DAY%2B1DAY]&fq=geoname:*&wt=json&rows=0\n",
+            "basic_query": "",
+            "mode": "all",
+            "custom": ""
+          },
+          "counter_pos": "above",
+          "span": 3
+        }
+      ],
+      "editable": true,
+      "collapsable": true,
+      "collapse": false
+    },
+    {
+      "title": "Filter & Time Picker",
+      "height": "150px",
+      "editable": true,
+      "collapse": true,
+      "collapsable": true,
+      "panels": [
+        {
+          "error": false,
+          "span": 7,
+          "editable": true,
+          "type": "filtering",
+          "loadingEditor": false,
+          "spyable": true,
+          "title": "Filter"
+        },
+        {
+          "error": "",
+          "span": 5,
+          "editable": true,
+          "type": "timepicker",
+          "loadingEditor": false,
+          "status": "Stable",
+          "mode": "relative",
+          "time_options": [
+            "15m",
+            "1h",
+            "6h",
+            "24h",
+            "2d",
+            "7d",
+            "30d"
+          ],
+          "timespan": "30d",
+          "timefield": "date",
+          "timeformat": "",
+          "spyable": true,
+          "refresh": {
+            "enable": false,
+            "interval": 30,
+            "min": 3
+          },
+          "title": "Time Picker",
+          "filter_id": 0
+        }
+      ]
+    },
+    {
+      "title": "Map And Histogram",
+      "height": "300px",
+      "editable": true,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 5,
+          "editable": true,
+          "type": "histogram",
+          "loadingEditor": false,
+          "mode": "count",
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&wt=json&rows=0&fq=date:[NOW/DAY-30DAY%20TO%20NOW/DAY%2B1DAY]&fq=geoname:*&facet=true&facet.range=date&facet.range.start=NOW/DAY-30DAY&facet.range.end=NOW/DAY%2B1DAY&facet.range.gap=%2B12HOUR\n",
+            "custom": ""
+          },
+          "max_rows": 100000,
+          "value_field": null,
+          "group_field": null,
+          "auto_int": true,
+          "resolution": 100,
+          "interval": "12h",
+          "intervals": [
+            "auto",
+            "1s",
+            "1m",
+            "5m",
+            "10m",
+            "30m",
+            "1h",
+            "3h",
+            "12h",
+            "1d",
+            "1w",
+            "1M",
+            "1y"
+          ],
+          "fill": 0,
+          "linewidth": 1,
+          "timezone": "browser",
+          "spyable": false,
+          "zoomlinks": true,
+          "bars": true,
+          "stack": true,
+          "points": false,
+          "lines": true,
+          "lines_smooth": false,
+          "legend": true,
+          "x-axis": true,
+          "y-axis": true,
+          "percentage": false,
+          "interactive": true,
+          "options": true,
+          "show_queries": true,
+          "tooltip": {
+            "value_type": "cumulative",
+            "query_as_alias": false
+          },
+          "title": "Histogram"
+        },
+        {
+          "span": 7,
+          "editable": false,
+          "type": "bettermap",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&wt=json&rows=1000&fq=date:[NOW/DAY-30DAY%20TO%20NOW/DAY%2B1DAY]&fq=geoname:*&sort=date desc",
+            "custom": ""
+          },
+          "size": 1000,
+          "spyable": false,
+          "lat_start": "",
+          "lat_end": "",
+          "lon_start": "",
+          "lon_end": "",
+          "tooltip": "user",
+          "field": "coordinate",
+          "show_queries": true,
+          "title": "Map"
+        }
+      ]
+    },
+    {
+      "title": "Chart",
+      "height": "150px",
+      "editable": true,
+      "collapse": false,
+      "collapsable": true,
+      "panels": [
+        {
+          "span": 4,
+          "editable": true,
+          "type": "terms",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&wt=json&rows=0&fq=date:[NOW/DAY-30DAY%20TO%20NOW/DAY%2B1DAY]&fq=geoname:*&facet=true&facet.field=source&facet.limit=10&facet.missing=true",
+            "custom": ""
+          },
+          "mode": "count",
+          "field": "source",
+          "stats_field": "",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 10,
+          "order": "descending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": false,
+          "tilt": false,
+          "labels": true,
+          "logAxis": false,
+          "arrangement": "horizontal",
+          "chart": "pie",
+          "counter_pos": "none",
+          "lastColor": "",
+          "spyable": false,
+          "show_queries": false,
+          "chartColors": [
+            "#7EB26D",
+            "#EAB839",
+            "#6ED0E0",
+            "#EF843C",
+            "#E24D42",
+            "#1F78C1",
+            "#BA43A9",
+            "#705DA0",
+            "#508642",
+            "#CCA300",
+            "#447EBC",
+            "#C15C17",
+            "#890F02",
+            "#0A437C",
+            "#6D1F62",
+            "#584477",
+            "#B7DBAB",
+            "#F4D598",
+            "#70DBED",
+            "#F9BA8F",
+            "#F29191",
+            "#82B5D8",
+            "#E5A8E2",
+            "#AEA2E0",
+            "#629E51",
+            "#E5AC0E",
+            "#64B0C8",
+            "#E0752D",
+            "#BF1B00",
+            "#0A50A1",
+            "#962D82",
+            "#614D93",
+            "#9AC48A",
+            "#F2C96D",
+            "#65C5DB",
+            "#F9934E",
+            "#EA6460",
+            "#5195CE",
+            "#D683CE",
+            "#806EB7",
+            "#3F6833",
+            "#967302",
+            "#2F575E",
+            "#99440A",
+            "#58140C",
+            "#052B51",
+            "#511749",
+            "#3F2B5B",
+            "#E0F9D7",
+            "#FCEACA",
+            "#CFFAFF",
+            "#F9E2D2",
+            "#FCE2DE",
+            "#BADFF4",
+            "#F9D9F9",
+            "#DEDAF7"
+          ],
+          "title": "Source",
+          "show_help_message": false,
+          "info_mode": "text",
+          "info_font_size": "16pt",
+          "help_message": "Chart from sou"
+        },
+        {
+          "span": 4,
+          "editable": true,
+          "type": "terms",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&wt=json&rows=0&fq=date:[NOW/DAY-30DAY%20TO%20NOW/DAY%2B1DAY]&fq=geoname:*&facet=true&facet.field=user&facet.limit=5&facet.missing=true",
+            "custom": ""
+          },
+          "mode": "count",
+          "field": "user",
+          "stats_field": "",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 5,
+          "order": "descending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": false,
+          "tilt": false,
+          "labels": true,
+          "logAxis": false,
+          "arrangement": "vertical",
+          "chart": "bar",
+          "counter_pos": "right",
+          "lastColor": "",
+          "spyable": true,
+          "show_queries": true,
+          "chartColors": [
+            "#7EB26D",
+            "#EAB839",
+            "#6ED0E0",
+            "#EF843C",
+            "#E24D42",
+            "#1F78C1",
+            "#BA43A9",
+            "#705DA0",
+            "#508642",
+            "#CCA300",
+            "#447EBC",
+            "#C15C17",
+            "#890F02",
+            "#0A437C",
+            "#6D1F62",
+            "#584477",
+            "#B7DBAB",
+            "#F4D598",
+            "#70DBED",
+            "#F9BA8F",
+            "#F29191",
+            "#82B5D8",
+            "#E5A8E2",
+            "#AEA2E0",
+            "#629E51",
+            "#E5AC0E",
+            "#64B0C8",
+            "#E0752D",
+            "#BF1B00",
+            "#0A50A1",
+            "#962D82",
+            "#614D93",
+            "#9AC48A",
+            "#F2C96D",
+            "#65C5DB",
+            "#F9934E",
+            "#EA6460",
+            "#5195CE",
+            "#D683CE",
+            "#806EB7",
+            "#3F6833",
+            "#967302",
+            "#2F575E",
+            "#99440A",
+            "#58140C",
+            "#052B51",
+            "#511749",
+            "#3F2B5B",
+            "#E0F9D7",
+            "#FCEACA",
+            "#CFFAFF",
+            "#F9E2D2",
+            "#FCE2DE",
+            "#BADFF4",
+            "#F9D9F9",
+            "#DEDAF7"
+          ],
+          "title": "User"
+        },
+        {
+          "span": 4,
+          "editable": true,
+          "type": "terms",
+          "loadingEditor": false,
+          "queries": {
+            "mode": "all",
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&wt=json&rows=0&fq=date:[NOW/DAY-30DAY%20TO%20NOW/DAY%2B1DAY]&fq=geoname:*&facet=true&facet.field=gender&facet.limit=10&facet.missing=true",
+            "custom": ""
+          },
+          "mode": "count",
+          "field": "gender",
+          "stats_field": "",
+          "decimal_points": 0,
+          "exclude": [],
+          "missing": false,
+          "other": false,
+          "size": 10,
+          "order": "descending",
+          "style": {
+            "font-size": "10pt"
+          },
+          "donut": false,
+          "tilt": false,
+          "labels": true,
+          "logAxis": false,
+          "arrangement": "horizontal",
+          "chart": "pie",
+          "counter_pos": "none",
+          "lastColor": "",
+          "spyable": true,
+          "show_queries": true,
+          "chartColors": [
+            "#7EB26D",
+            "#EAB839",
+            "#6ED0E0",
+            "#EF843C",
+            "#E24D42",
+            "#1F78C1",
+            "#BA43A9",
+            "#705DA0",
+            "#508642",
+            "#CCA300",
+            "#447EBC",
+            "#C15C17",
+            "#890F02",
+            "#0A437C",
+            "#6D1F62",
+            "#584477",
+            "#B7DBAB",
+            "#F4D598",
+            "#70DBED",
+            "#F9BA8F",
+            "#F29191",
+            "#82B5D8",
+            "#E5A8E2",
+            "#AEA2E0",
+            "#629E51",
+            "#E5AC0E",
+            "#64B0C8",
+            "#E0752D",
+            "#BF1B00",
+            "#0A50A1",
+            "#962D82",
+            "#614D93",
+            "#9AC48A",
+            "#F2C96D",
+            "#65C5DB",
+            "#F9934E",
+            "#EA6460",
+            "#5195CE",
+            "#D683CE",
+            "#806EB7",
+            "#3F6833",
+            "#967302",
+            "#2F575E",
+            "#99440A",
+            "#58140C",
+            "#052B51",
+            "#511749",
+            "#3F2B5B",
+            "#E0F9D7",
+            "#FCEACA",
+            "#CFFAFF",
+            "#F9E2D2",
+            "#FCE2DE",
+            "#BADFF4",
+            "#F9D9F9",
+            "#DEDAF7"
+          ],
+          "title": "Gender"
+        }
+      ]
+    },
+    {
+      "title": "Facet & Document View",
+      "height": "400px",
+      "panels": [
+        {
+          "trimFactor": 300,
+          "sort": [
+            "date"
+          ],
+          "body_field": "body",
+          "loadingEditor": false,
+          "sortable": true,
+          "show_help_message": false,
+          "spyable": false,
+          "highlight": [],
+          "type": "fullTextSearch",
+          "title": "Facet & Document View",
+          "style": {
+            "font-size": "9pt"
+          },
+          "exportAll": true,
+          "field_list": true,
+          "exportSize": 1000,
+          "normTimes": true,
+          "offset": 0,
+          "paging": true,
+          "fields": [
+            "source",
+            "gender",
+            "user"
+          ],
+          "status": "Stable",
+          "pages": 100,
+          "editable": true,
+          "header": true,
+          "size": 10,
+          "saveOption": "json",
+          "url_field": "id",
+          "show_queries": true,
+          "foundResults": true,
+          "facet_limit": 10,
+          "header_field": "id",
+          "overflow": "min-height",
+          "queries": {
+            "ids": [
+              0
+            ],
+            "query": "q=*%3A*&fq=date:[NOW/DAY-30DAY%20TO%20NOW/DAY%2B1DAY]&fq=geoname:*&facet=true&facet.field=source&facet.field=gender&facet.field=user&wt=json&rows=1000&hl=true&hl.fl=body",
+            "basic_query": "q=*%3A*&fq=date:[NOW/DAY-30DAY%20TO%20NOW/DAY%2B1DAY]&fq=geoname:*&facet=true&facet.field=source&facet.field=gender&facet.field=user",
+            "mode": "all",
+            "custom": ""
+          },
+          "group": "default",
+          "span": 12
+        }
+      ],
+      "editable": true,
+      "collapsable": true,
+      "collapse": false
+    }
+  ]
+}

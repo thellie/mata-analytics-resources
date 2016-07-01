@@ -1,0 +1,16 @@
+Dear Users,
+
+
+Your free account has been registered, please review your account details:
+
+username	: [usernametowrite]
+password	: [passwordtowrite]
+
+Please visit http://max.mataprima.com/admin for admin console and http://max.mataprima.com/anaytics/ for dashboard.
+
+For more information please contact us at support@mataprima.com.
+
+
+Regards,
+
+Mata Support Team

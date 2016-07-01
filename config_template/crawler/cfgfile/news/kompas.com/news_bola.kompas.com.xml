@@ -1,0 +1,38 @@
+<properties>
+	<body>
+		<replacepostcontents/>
+		<xpathpostcontents>body > div.container > div.kcm-main.clearfix > div > div.span8.kcm-new-bola > div.kcm-read.mt2.clearfix > div.kcm-read-content-text > div.span6.nml</xpathpostcontents>
+	</body>
+	<id>
+		<xpathpostids>body > div.container > div.kcm-main.clearfix > div > div.span8.kcm-new-bola > div.kcm-read.mt2.clearfix > div.kcm-read-content-top > h2</xpathpostids>
+		<patternpostids/>
+		<replacepostids/>
+	</id>
+	<source>
+		<crawlname>Kompas News</crawlname>
+	</source>
+	<date>
+		<xpathdates>body > div.container > div.kcm-main.clearfix > div > div.span8.kcm-new-bola > div.kcm-read.mt2.clearfix > div.kcm-read-content-top > div > div.kcm-date.msmall.grey</xpathdates>
+		<dateformat>ddMMMMyyyyHH:mm</dateformat>
+		<replacedates>^(.*?),</replacedates>
+		<attribute/>
+	</date>
+	<user>
+		<xpathusers>body > div.container > div.kcm-main.clearfix > div > div.span8.kcm-new-bola > div.kcm-read.mt2.clearfix > div.kcm-read-content-text > div.span6.nml > div.kcm-read-copy.mb2 > table > tbody > tr:nth-child(1) > td:nth-child(2)</xpathusers>
+		<replaceusers>kompas.com /|kompas.com/|(.*?),|: </replaceusers>
+	</user>
+	<header>
+		<replaceheader/>
+		<xpathheader>body > div.container > div.kcm-main.clearfix > div > div.span8.kcm-new-bola > div.kcm-read.mt2.clearfix > div.kcm-read-content-top > h2</xpathheader>
+	</header>
+	<linkfollow>
+		<patternlink>http://(.*?).kompas.com/read/.*</patternlink>
+		<patternnextpage>http://search.kompas.com/.*</patternnextpage>
+	</linkfollow>
+	<outputdir>
+		<outputdir>d:/Collections/BIN/kompasnews</outputdir>
+	</outputdir>
+	<manualcrawl>
+		<booleanmanual>false</booleanmanual>
+	</manualcrawl>
+</properties>

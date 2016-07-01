@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="com.mata.genanno.MAXAnno_pear">
+      <import location="file:/C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/com.mata.genanno.MAXAnno_pear.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>aeDescriptor</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>com.mata.genanno.MAXAnno_pear</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs>
+          <type allAnnotatorFeatures="true">uima.tcas.DocumentAnnotation</type>
+          <type allAnnotatorFeatures="true">uima.tt.TTAnnotation</type>
+          <type allAnnotatorFeatures="true">uima.tt.DocStructureAnnotation</type>
+          <type allAnnotatorFeatures="true">uima.tt.ParagraphAnnotation</type>
+          <type allAnnotatorFeatures="true">uima.tt.SentenceAnnotation</type>
+          <type allAnnotatorFeatures="true">uima.tt.LexicalAnnotation</type>
+          <type allAnnotatorFeatures="true">uima.tt.DictionaryEntryAnnotation</type>
+          <type allAnnotatorFeatures="true">uima.tt.TokenLikeAnnotation</type>
+          <type allAnnotatorFeatures="true">uima.tt.TokenAnnotation</type>
+          <type allAnnotatorFeatures="true">uima.tt.CompPartAnnotation</type>
+          <type allAnnotatorFeatures="true">uima.tt.KeyStringEntry</type>
+          <type allAnnotatorFeatures="true">uima.tt.Lemma</type>
+          <type allAnnotatorFeatures="true">uima.tt.LanguageConfidencePair</type>
+          <type allAnnotatorFeatures="true">com.ibm.langware.uimatypes.WordLikeToken</type>
+          <type allAnnotatorFeatures="true">com.ibm.langware.uimatypes.Alphabetic</type>
+          <type allAnnotatorFeatures="true">com.ibm.langware.uimatypes.UppercaseAlphabetic</type>
+          <type allAnnotatorFeatures="true">com.ibm.langware.uimatypes.TitlecaseAlphabetic</type>
+          <type allAnnotatorFeatures="true">com.ibm.langware.uimatypes.LowercaseAlphabetic</type>
+          <type allAnnotatorFeatures="true">com.ibm.langware.uimatypes.Arabic</type>
+          <type allAnnotatorFeatures="true">com.ibm.langware.uimatypes.Hebrew</type>
+          <type allAnnotatorFeatures="true">com.ibm.langware.uimatypes.Syllabic</type>
+          <type allAnnotatorFeatures="true">com.ibm.langware.uimatypes.Hiragana</type>
+          <type allAnnotatorFeatures="true">com.ibm.langware.uimatypes.Katakana</type>
+          <type allAnnotatorFeatures="true">com.ibm.langware.uimatypes.Hangul</type>
+          <type allAnnotatorFeatures="true">com.ibm.langware.uimatypes.Ideographic</type>
+          <type allAnnotatorFeatures="true">com.ibm.langware.uimatypes.Han</type>
+          <type allAnnotatorFeatures="true">com.ibm.langware.uimatypes.Numeric</type>
+          <type allAnnotatorFeatures="true">com.ibm.langware.uimatypes.ChineseNumeral</type>
+          <type allAnnotatorFeatures="true">com.ibm.langware.uimatypes.Punctuation</type>
+          <type allAnnotatorFeatures="true">com.ibm.langware.uimatypes.ClauseEndingPunctuation</type>
+        </outputs>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

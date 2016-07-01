@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>SentimentParse-ts</name>
+  <description></description>
+  <vendor></vendor>
+  <version></version>
+  <types>
+    <typeDescription>
+      <name>com.ibm.lw.marker.MarkerSentimentParseOutputType</name>
+      <description>Marker Type, used to separate outputs of a rule DB from it inputs, in the UIMA priority list</description>
+      <supertypeName>uima.cas.TOP</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>com.mata.genanno.SentimentParse</name>
+      <description></description>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>polarity</name>
+          <description></description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>sentimentTerm</name>
+          <description></description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>ruleId</name>
+          <description></description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        </features>
+    </typeDescription>
+    </types>
+</typeSystemDescription>

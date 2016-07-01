@@ -1,0 +1,38 @@
+<properties>
+	<body>
+		<xpathpostcontents>div.messageInfo.primaryContent > div.messageContent</xpathpostcontents>
+		<replacepostcontents></replacepostcontents>
+	</body>
+	<id>
+		<xpathpostids>#posts</xpathpostids>
+		<patternpostids>&lt;table class="tborder" id="(.*)" cellpadding=(.*)&gt;</patternpostids>
+		<replacepostids>&lt;table class="tborder" id="|" cellpadding=(.*)&gt;</replacepostids>
+	</id>
+	<source>
+		<crawlname>VIVA Forum</crawlname>
+	</source>
+	<date>
+		<xpathdates>div.messageInfo.primaryContent > div.messageMeta.ToggleTriggerAnchor > div.privateControls > span > a > abbr</xpathdates>
+		<dateformat>MMMdd,yyyyH:mm</dateformat>
+		<replacedates>at</replacedates>
+		<attribute></attribute>
+	</date>
+	<user>
+		<xpathusers>div.messageUserInfo > div > h3 > a</xpathusers>
+		<replaceusers></replaceusers>
+	</user>
+	<header>
+		<xpathheader>#content > div > div > div.titleBar > h1</xpathheader>
+		<replaceheader></replaceheader>
+	</header>
+	<linkfollow>
+		<patternlink></patternlink>
+		<patternnextpage></patternnextpage>
+	</linkfollow>
+	<outputdir>
+		<outputdir></outputdir>
+	</outputdir>
+	<manualcrawl>
+		<booleanmanual>false</booleanmanual>
+	</manualcrawl>
+</properties>

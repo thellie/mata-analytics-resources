@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<typePriorities xmlns="http://uima.apache.org/resourceSpecifier">
+  <priorityList>
+    <type>uima.tcas.DocumentAnnotation</type>
+    <type>uima.tt.ParagraphAnnotation</type>
+    <type>uima.tt.SentenceAnnotation</type>
+    <type>com.mata.genanno.LocationParse</type>
+    <type>com.ibm.lw.marker.MarkerLocationParseOutputType</type>
+    <type>com.mata.genanno.ID_City</type>
+    <type>com.mata.genanno.ID_Prefix_Location</type>
+    <type>com.mata.genanno.ID_Region</type>
+    <type>com.mata.genanno.ID_Province</type>
+    <type>com.mata.genanno.ID_Country</type>
+    <type>com.mata.genanno.ID_CC_Location</type>
+    <type>uima.tt.DictionaryEntryAnnotation</type>
+    <type>uima.tt.TokenAnnotation</type>
+  </priorityList>
+</typePriorities>

@@ -1,0 +1,38 @@
+<properties>
+	<body>
+		<xpathpostcontents>.detail_text</xpathpostcontents>
+	<replacepostcontents>^[a-zA-Z\W]+ [\W] </replacepostcontents>
+		</body>
+	<id>
+		<xpathpostids>head &gt; title</xpathpostids>
+		<patternpostids></patternpostids>
+		<replacepostids></replacepostids>
+	</id>
+	<source>
+		<crawlname>news.detik.com</crawlname>
+	</source>
+	<date>
+		<xpathdates>.date</xpathdates>
+		<dateformat>ddMMMyyyyHH:mm</dateformat>
+		<replacedates>^[a-zA-Z]+|,|WI.*</replacedates>
+		<attribute></attribute>
+	</date>
+	<user>
+		<xpathusers>.author</xpathusers>
+		<replaceusers> -.*</replaceusers>
+	</user>
+	<header>
+		<xpathheader>head &gt; title</xpathheader>
+	<replaceheader></replaceheader>
+		</header>
+	<linkfollow>
+		<patternlink/>
+		<patternnextpage/>
+	</linkfollow>
+	<outputdir>
+		<outputdir></outputdir>
+	</outputdir>
+	<manualcrawl>
+		<booleanmanual>false</booleanmanual>
+	</manualcrawl>
+</properties>

@@ -1,0 +1,15 @@
+			<lst name="type">
+				<str name="name">uima.tcas.DocumentAnnotation</str>
+				<lst name="mapping">
+					<str name="feature">language</str>
+					<str name="field">_TEMP_language</str>
+				</lst>
+ 		 	</lst>
+		</lst>
+		</lst>
+      </processor>
+      <processor class="solr.LogUpdateProcessorFactory" />
+      <processor class="solr.RunUpdateProcessorFactory" />
+  </updateRequestProcessorChain>
+
+</config>

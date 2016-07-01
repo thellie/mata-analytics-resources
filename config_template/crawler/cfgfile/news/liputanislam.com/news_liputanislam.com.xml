@@ -1,0 +1,38 @@
+<properties>
+	<body>
+		<xpathpostcontents>.entry</xpathpostcontents>
+		<replacepostcontents>^.*LiputanIslam.com[\W ]+ </replacepostcontents>
+	</body>
+	<id>
+		<xpathpostids>h1.title</xpathpostids>
+		<patternpostids></patternpostids>
+		<replacepostids></replacepostids>
+	</id>
+	<source>
+		<crawlname>liputanislam.com</crawlname>
+	</source>
+	<date>
+		<xpathdates>.post-meta</xpathdates>
+		<dateformat>dd/MM/yyyy</dateformat>
+		<replacedates>.*Rubrik[a-zA-Z\-\W ]+|Print</replacedates>
+		<attribute></attribute>
+	</date>
+	<user>
+		<xpathusers>.post-meta &gt; a:nth-child(2)</xpathusers>
+		<replaceusers></replaceusers>
+	</user>
+	<header>
+		<xpathheader>h1.title</xpathheader>
+		<replaceheader></replaceheader>
+	</header>
+	<linkfollow>
+		<patternlink/>
+		<patternnextpage/>
+	</linkfollow>
+	<outputdir>
+		<outputdir></outputdir>
+	</outputdir>
+	<manualcrawl>
+		<booleanmanual>false</booleanmanual>
+	</manualcrawl>
+</properties>

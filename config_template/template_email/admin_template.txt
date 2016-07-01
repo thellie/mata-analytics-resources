@@ -1,0 +1,18 @@
+Dear Admin,
+
+New user have been registered as following details:
+
+email		: [emailtowrite]
+username	: [usernametowrite]
+firstname	: [fistnametowrite]
+lastname	: [lastnametowrite]
+phone number	: [phonetowrite]
+organization	: [organizationtowrite]
+password	: [passwordtowrite]
+
+
+Please follow up and enable registered user.
+
+Regards,
+
+Mata Support Team.

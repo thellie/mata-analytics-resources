@@ -1,0 +1,38 @@
+<properties>
+	<body>
+		<replacepostcontents/>
+		<xpathpostcontents>div.span6.nml &gt; span</xpathpostcontents>
+	</body>
+	<id>
+		<xpathpostids>.kcm-read-content-top &gt; h2:nth-child(2)</xpathpostids>
+		<patternpostids/>
+		<replacepostids/>
+	</id>
+	<source>
+		<crawlname>Kompas News</crawlname>
+	</source>
+	<date>
+		<xpathdates>div.kcm-read-content-top&gt;div.grey.small</xpathdates>
+		<dateformat>ddMMMMyyyyHH:mm</dateformat>
+		<replacedates>^(.*?),</replacedates>
+		<attribute/>
+	</date>
+	<user>
+		<xpathusers>table.grey &gt; tbody:nth-child(1) &gt; tr:nth-child(1) &gt; td:nth-child(2)</xpathusers>
+		<replaceusers>kompas.com /|kompas.com/|:</replaceusers>
+	</user>
+	<header>
+		<replaceheader/>
+		<xpathheader>.kcm-read-content-top &gt; h2:nth-child(2)</xpathheader>
+	</header>
+	<linkfollow>
+		<patternlink>http://(.*?).kompas.com/read/.*</patternlink>
+		<patternnextpage>http://search.kompas.com/.*</patternnextpage>
+	</linkfollow>
+	<outputdir>
+		<outputdir>d:/Collections/BIN/kompasnews</outputdir>
+	</outputdir>
+	<manualcrawl>
+		<booleanmanual>false</booleanmanual>
+	</manualcrawl>
+</properties>

@@ -1,0 +1,38 @@
+<properties>
+	<body>
+		<replacepostcontents/>
+		<xpathpostcontents>#contentx</xpathpostcontents>
+	</body>
+	<id>
+		<xpathpostids>body > div.container.news-home > div.row > div > div.col-md-8.col-sm-7.pr-0.left-wrap > div > div > div.titles > h1</xpathpostids>
+		<patternpostids/>
+		<replacepostids/>
+	</id>
+	<source>
+		<crawlname>Okezone News</crawlname>
+	</source>
+	<date>
+		<xpathdates>body > div.container.news-home > div.row > div > div.col-md-8.col-sm-7.pr-0.left-wrap > div > div > div.meta-post > time</xpathdates>
+		<dateformat>ddMMMMyyyy-HH:mm</dateformat>
+		<replacedates>(.*?),</replacedates>
+		<attribute/>
+	</date>
+	<user>
+		<xpathusers>body > div.container.news-home > div.row > div > div.col-md-8.col-sm-7.pr-0.left-wrap > div > div > div.detail-page.v2 > div.detail-social-share-ab.sosm > div.autor > div.nmreporter > div</xpathusers>
+		<replaceusers></replaceusers>
+	</user>
+	<header>
+		<replaceheader/>
+		<xpathheader>body > div.container.news-home > div.row > div > div.col-md-8.col-sm-7.pr-0.left-wrap > div > div > div.titles > h1</xpathheader>
+	</header>
+	<linkfollow>
+		<patternlink></patternlink>
+		<patternnextpage></patternnextpage>
+	</linkfollow>
+	<outputdir>
+		<outputdir></outputdir>
+	</outputdir>
+	<manualcrawl>
+		<booleanmanual>false</booleanmanual>
+	</manualcrawl>
+</properties>

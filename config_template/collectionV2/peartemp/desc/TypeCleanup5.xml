@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?><analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+    <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+    <primitive>true</primitive>
+    <annotatorImplementationName>com.ibm.dltj.uima_annotator.cleanup.TypeCleanupAnnotator</annotatorImplementationName>
+    <analysisEngineMetaData>
+        <name>Type Cleanup</name>
+        <description>Cleanup types</description>
+        <version>8.0.2.0</version>
+        <vendor>IBM Corporation</vendor>
+        <configurationParameters>
+            <configurationParameter>
+                <name>DiscardTypes</name>
+                <description>Types to discard from the CAS copy.</description>
+                <type>String</type>
+                <multiValued>true</multiValued>
+                <mandatory>true</mandatory>
+            </configurationParameter>
+        </configurationParameters>
+        <configurationParameterSettings>
+            <nameValuePair>
+                <name>DiscardTypes</name>
+                <value>
+                    <array>
+                        <string>uima.tt.DictionaryEntryAnnotation</string>
+                        <string>com.mata.genanno.ID_Prefix_Name</string>
+                        <string>com.mata.genanno.SentimentKeywords</string>
+                        <string>com.mata.genanno.Phone_Number</string>
+                        <string>com.mata.genanno.ID_Suffix_Organization</string>
+                        <string>com.mata.genanno.UsernameEndUnderscore</string>
+                        <string>com.mata.genanno.Month</string>
+                        <string>com.mata.genanno.Negation</string>
+                        <string>com.mata.genanno.UsernameStartUnderscore</string>
+                        <string>com.mata.genanno.Names</string>
+                        <string>com.mata.genanno.Domain_Suffix</string>
+                        <string>com.mata.genanno.Hashtag</string>
+                        <string>com.mata.genanno.Date</string>
+                        <string>com.mata.genanno.ID_City</string>
+                        <string>com.mata.genanno.ID_Country</string>
+                        <string>com.mata.genanno.ID_Province</string>
+                        <string>com.mata.genanno.ID_Suffix_Name</string>
+                        <string>com.mata.genanno.Email</string>
+                        <string>com.mata.genanno.ID_Prefix_Organization</string>
+                        <string>com.mata.genanno.ID_Prefix_Location</string>
+                        <string>com.mata.genanno.NegativeSmiley</string>
+                        <string>com.mata.genanno.ID_CC_Prefix_Location</string>
+                        <string>com.mata.genanno.OpinionPhraseLevel1</string>
+                        <string>com.mata.genanno.OpinionPhraseLevel2</string>
+                        <string>com.mata.genanno.PositiveSmiley</string>
+                        <string>com.mata.genanno.Mention</string>
+                        <string>com.mata.genanno.UsernameMidUnderscore</string>
+                        <string>com.mata.genanno.Sentiment</string>
+                        <string>com.mata.genanno.Url</string>
+                    </array>
+                </value>
+            </nameValuePair>
+        </configurationParameterSettings>
+        <typeSystemDescription/>
+        <capabilities>
+            <capability>
+                <inputs/>
+                <outputs/>
+                <languagesSupported/>
+            </capability>
+        </capabilities>
+        <operationalProperties>
+            <modifiesCas>true</modifiesCas>
+            <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+            <outputsNewCASes>false</outputsNewCASes>
+        </operationalProperties>
+    </analysisEngineMetaData>
+</analysisEngineDescription>

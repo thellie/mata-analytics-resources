@@ -1,0 +1,28 @@
+<properties>
+<id>
+    <xpathpostids>div.user-thread &gt; ul.uinfo &gt; li.ureply &gt; span</xpathpostids>
+    <replacepostids>&lt;a href=".*idOpinion=|"&gt;</replacepostids>
+    <patternpostids>&lt;a href=".*idOpinion=[0-9]+"&gt;</patternpostids>
+  </id>
+  <body>
+    <xpathpostcontents>div.user-thread &gt; p.uopin</xpathpostcontents>
+    <replacepostcontents/>
+  </body>
+  <source>
+    <crawlname>GSM Arena Samsung 3</crawlname>
+  </source>
+  <date>
+    <xpathdates>div.user-thread &gt; ul.uinfo &gt; li.upost</xpathdates>
+    <dateformat>yyyy-MM-ddHH:mm</dateformat>
+    <attribute/>
+    <replacedates/>
+  </date>
+  <user>
+    <xpathusers>div.user-thread &gt; ul.uinfo2 &gt; li[class~=uname]</xpathusers>
+    <replaceusers/>
+  </user>
+  <header>
+    <replaceheader>[ ]+-[ ]+.*</replaceheader>
+    <xpathheader>div[id=ttl].brand</xpathheader>
+  </header>
+</properties>

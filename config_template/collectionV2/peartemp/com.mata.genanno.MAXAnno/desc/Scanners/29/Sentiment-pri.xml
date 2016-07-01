@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<typePriorities xmlns="http://uima.apache.org/resourceSpecifier">
+  <priorityList>
+    <type>uima.tcas.DocumentAnnotation</type>
+    <type>uima.tt.ParagraphAnnotation</type>
+    <type>uima.tt.SentenceAnnotation</type>
+    <type>OpinionPhrase</type>
+    <type>com.ibm.lw.marker.MarkerSentimentOutputType</type>
+    <type>com.mata.genanno.Keyword</type>
+    <type>com.mata.genanno.OpinionPhraseLevel2</type>
+    <type>com.mata.genanno.OpinionPhraseLevel1</type>
+    <type>uima.tt.DictionaryEntryAnnotation</type>
+    <type>uima.tt.TokenAnnotation</type>
+  </priorityList>
+</typePriorities>

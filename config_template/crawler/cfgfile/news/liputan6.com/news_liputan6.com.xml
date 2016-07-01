@@ -1,0 +1,3 @@
+<properties>
+<body><replacepostcontents/><xpathpostcontents>.text-detail &gt; p:nth-child(1)</xpathpostcontents></body><source><crawlname>liputan6</crawlname></source><date><xpathdates>.updated</xpathdates><dateformat>ddMMMMyyyyHH:mm</dateformat><attribute/><replacedates>at</replacedates></date><user><xpathusers>span.fn</xpathusers><replaceusers/></user><header><replaceheader/><xpathheader>.entry-title</xpathheader></header>
+</properties>

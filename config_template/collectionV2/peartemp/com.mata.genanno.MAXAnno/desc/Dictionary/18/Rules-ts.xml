@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>RegExTypes</name>
+  <description>RegEx dictionary based types.</description>
+  <vendor>IBM</vendor>
+  <version>1.0</version>
+  <types>
+    <typeDescription>
+      <name>com.mata.genanno.Mention</name>
+      <description></description>
+      <supertypeName>uima.tt.DictionaryEntryAnnotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>com.mata.genanno.Email</name>
+      <description></description>
+      <supertypeName>uima.tt.DictionaryEntryAnnotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>com.mata.genanno.Hashtag</name>
+      <description></description>
+      <supertypeName>uima.tt.DictionaryEntryAnnotation</supertypeName>
+    </typeDescription>
+    <typeDescription>
+      <name>com.mata.genanno.Url</name>
+      <description></description>
+      <supertypeName>uima.tt.DictionaryEntryAnnotation</supertypeName>
+    </typeDescription>
+  </types>
+</typeSystemDescription>

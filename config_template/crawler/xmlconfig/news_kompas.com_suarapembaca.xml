@@ -1,0 +1,23 @@
+<properties>
+<body>
+    <replacepostcontents/>
+    <xpathpostcontents>.rightListRubrik4</xpathpostcontents>
+  </body>
+  <source>
+    <crawlname>Suara Pembaca Kompas Sequislife</crawlname>
+  </source>
+  <date>
+    <xpathdates>.rightListRubrik4 &gt; h5:nth-child(3)</xpathdates>
+    <dateformat>ddMMMMyyyyHH:mm</dateformat>
+    <attribute/>
+    <replacedates>.*,| |\|</replacedates>
+  </date>
+  <user>
+    <xpathusers>.boxPembaca</xpathusers>
+    <replaceusers/>
+  </user>
+  <header>
+    <replaceheader/>
+    <xpathheader>.rightListRubrik4 &gt; a:nth-child(2)</xpathheader>
+  </header>
+</properties>

@@ -1,0 +1,38 @@
+<properties>
+	<body>
+		<replacepostcontents/>
+		<xpathpostcontents>#skrol > div.w720.left.hal-baca > div.baca-content > div.content-text.right > div.div-read</xpathpostcontents>
+	</body>
+	<id>
+		<xpathpostids>#skrol > div.w720.left.hal-baca > div.baca-content > h1</xpathpostids>
+		<patternpostids/>
+		<replacepostids/>
+	</id>
+	<source>
+		<crawlname>Kompas News</crawlname>
+	</source>
+	<date>
+		<xpathdates>#content</xpathdates>
+		<dateformat>ddMMMMyyyyHH:mm</dateformat>
+		<replacedates>^(.*?),</replacedates>
+		<attribute/>
+	</date>
+	<user>
+		<xpathusers>#skrol > div.w720.left.hal-baca > div.baca-content > div.content-text.right > div.penulis-editor > table > tbody > tr:nth-child(1) > td:nth-child(2)</xpathusers>
+		<replaceusers>kompas.com /|kompas.com/|(.*?),|: </replaceusers>
+	</user>
+	<header>
+		<replaceheader/>
+		<xpathheader>#skrol > div.w720.left.hal-baca > div.baca-content > h1</xpathheader>
+	</header>
+	<linkfollow>
+		<patternlink>http://(.*?).kompas.com/read/.*</patternlink>
+		<patternnextpage>http://search.kompas.com/.*</patternnextpage>
+	</linkfollow>
+	<outputdir>
+		<outputdir>d:/Collections/BIN/kompasnews</outputdir>
+	</outputdir>
+	<manualcrawl>
+		<booleanmanual>false</booleanmanual>
+	</manualcrawl>
+</properties>

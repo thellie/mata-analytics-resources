@@ -1,0 +1,91 @@
+			<lst name="type">
+				<str name="name">uima.tcas.DocumentAnnotation</str>
+				<lst name="mapping">
+					<str name="feature">language</str>
+					<str name="field">language</str>
+				</lst>
+				<lst name="mapping">
+					<str name="feature">languageCandidates</str>
+					<str name="field">languageCandidates</str>
+				</lst>
+ 		 </lst>
+			<lst name="type">
+				<str name="name">uima.tt.ParagraphAnnotation</str>
+				<lst name="mapping">
+					<str name="feature">paragraphNumber</str>
+					<str name="field">paragraphNumber</str>
+				</lst>
+ 		 </lst>
+			<lst name="type">
+				<str name="name">uima.tt.SentenceAnnotation</str>
+				<lst name="mapping">
+					<str name="feature">sentenceNumber</str>
+					<str name="field">sentenceNumber</str>
+				</lst>
+ 		 </lst>
+			<lst name="type">
+				<str name="name">uima.tt.DictionaryEntryAnnotation</str>
+				<lst name="mapping">
+					<str name="feature">lemma</str>
+					<str name="field">lemma</str>
+				</lst>
+ 		 </lst>
+			<lst name="type">
+				<str name="name">uima.tt.TokenLikeAnnotation</str>
+				<lst name="mapping">
+					<str name="feature">lemma</str>
+					<str name="field">lemma</str>
+				</lst>
+				<lst name="mapping">
+					<str name="feature">lemmaEntries</str>
+					<str name="field">lemmaEntries</str>
+				</lst>
+				<lst name="mapping">
+					<str name="feature">dictionaryMatch</str>
+					<str name="field">dictionaryMatch</str>
+				</lst>
+ 		 </lst>
+			<lst name="type">
+				<str name="name">uima.tt.TokenAnnotation</str>
+				<lst name="mapping">
+					<str name="feature">posTag</str>
+					<str name="field">posTag</str>
+				</lst>
+ 		 </lst>
+			<lst name="type">
+				<str name="name">uima.tt.KeyStringEntry</str>
+				<lst name="mapping">
+					<str name="feature">key</str>
+					<str name="field">key</str>
+				</lst>
+ 		 </lst>
+			<lst name="type">
+				<str name="name">uima.tt.Lemma</str>
+				<lst name="mapping">
+					<str name="feature">partOfSpeech</str>
+					<str name="field">partOfSpeech</str>
+				</lst>
+				<lst name="mapping">
+					<str name="feature">frost_ExtendedPOS</str>
+					<str name="field">frost_ExtendedPOS</str>
+				</lst>
+ 		 </lst>
+			<lst name="type">
+				<str name="name">uima.tt.LanguageConfidencePair</str>
+				<lst name="mapping">
+					<str name="feature">languageConfidence</str>
+					<str name="field">languageConfidence</str>
+				</lst>
+				<lst name="mapping">
+					<str name="feature">language</str>
+					<str name="field">language</str>
+				</lst>
+ 		 </lst>
+		</lst>
+		</lst>
+      </processor>
+      <processor class="solr.LogUpdateProcessorFactory" />
+      <processor class="solr.RunUpdateProcessorFactory" />
+  </updateRequestProcessorChain>
+
+</config>

@@ -1,0 +1,26 @@
+<root>
+  <id>https://twitter.com/jubelmalang/status/725985505200893952</id>
+  <screenname>jubelmalang</screenname>
+  <name>Malang Best Promo</name>
+  <gender>male</gender>
+  <location>#DISKODISKON #JUBELMALANG </location>
+  <followercount>26941</followercount>
+  <friendcount>2582</friendcount>
+  <statuscount>258318</statuscount>
+  <latitude/>
+  <longitude/>
+  <coordinate/>
+  <geoname/>
+  <country/>
+  <postingdate>2016-04-29T16:50:07Z</postingdate>
+  <crawlingdate>2016-04-29T16:32:38Z</crawlingdate>
+  <body>►#FF Ganti LCD iPhone di @icaremalang bisa ditunggu. Harga mahasiswa. WA:08988000063/08589000006 PIN:5C64BD17 https://t.co/HSmWO4CUCI</body>
+  <replyto/>
+  <retweet>0</retweet>
+  <score>54.561743098454</score>
+  <joindate>2010-07-21T13:04:06Z</joindate>
+  <source>Twitter</source>
+  <followerkloutratio>493.77</followerkloutratio>
+  <sourceapp>TweetDeck</sourceapp>
+  <followerstatusratio>0.1043</followerstatusratio>
+</root>

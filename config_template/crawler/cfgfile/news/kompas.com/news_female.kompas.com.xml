@@ -1,0 +1,38 @@
+<properties>
+	<body>
+		<replacepostcontents/>
+		<xpathpostcontents>#leftside > div.kcm-read > div.kcm-read-body.clearfix > div.kcm-span6 > div > div.kcm-read-text</xpathpostcontents>
+	</body>
+	<id>
+		<xpathpostids>#leftside > div.kcm-read > div.kcm-read-top.clearfix > h2</xpathpostids>
+		<patternpostids/>
+		<replacepostids/>
+	</id>
+	<source>
+		<crawlname>Kompas News</crawlname>
+	</source>
+	<date>
+		<xpathdates>#content</xpathdates>
+		<dateformat>ddMMMMyyyyHH:mm</dateformat>
+		<replacedates>^(.*?),</replacedates>
+		<attribute/>
+	</date>
+	<user>
+		<xpathusers>#leftside > div.kcm-read > div.kcm-read-body.clearfix > div.kcm-span6 > div > div.kcm-read-copy.mb2 > table > tbody > tr:nth-child(1) > td:nth-child(2)</xpathusers>
+		<replaceusers>kompas.com /|kompas.com/|(.*?),|: </replaceusers>
+	</user>
+	<header>
+		<replaceheader/>
+		<xpathheader>#leftside > div.kcm-read > div.kcm-read-top.clearfix > h2</xpathheader>
+	</header>
+	<linkfollow>
+		<patternlink>http://(.*?).kompas.com/read/.*</patternlink>
+		<patternnextpage>http://search.kompas.com/.*</patternnextpage>
+	</linkfollow>
+	<outputdir>
+		<outputdir>d:/Collections/BIN/kompasnews</outputdir>
+	</outputdir>
+	<manualcrawl>
+		<booleanmanual>false</booleanmanual>
+	</manualcrawl>
+</properties>

@@ -1,0 +1,38 @@
+<properties>
+	<body>
+		<replacepostcontents/>
+		<xpathpostcontents>div.entry-body&gt;div.entry</xpathpostcontents>
+	</body>
+	<id>
+		<xpathpostids>div.listing-wrapper&gt;div[itemscope]</xpathpostids>
+		<patternpostids>&lt;div class="row [a-z]+\-post" id="(.*?)"&gt;</patternpostids>
+		<replacepostids>&lt;div class="row [a-z]+\-post" id="|"&gt;</replacepostids>
+	</id>
+	<source>
+		<crawlname>Kaskus Forum</crawlname>
+	</source>
+	<date>
+		<xpathdates>div.user-details&gt;time.entry-date</xpathdates>
+		<dateformat>yyyy-MM-ddHH:mm:ss</dateformat>
+		<replacedates>T</replacedates>
+		<attribute>datetime</attribute>
+	</date>
+	<user>
+		<xpathusers>div.user-details&gt;div.user-name&gt;a.nickname</xpathusers>
+		<replaceusers/>
+	</user>
+	<header>
+		<replaceheader/>
+		<xpathheader>div.breadcrumbs&gt;div.current</xpathheader>
+	</header>
+	<linkfollow>
+		<patternlink/>
+		<patternnextpage/>
+	</linkfollow>
+	<outputdir>
+		<outputdir>e:/Collections/kaskus</outputdir>
+	</outputdir>
+	<manualcrawl>
+		<booleanmanual>false</booleanmanual>
+	</manualcrawl>
+</properties>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<COMPONENT_INSTALLATION_DESCRIPTOR>
+	<OS>
+	</OS>
+	<TOOLKITS>
+	</TOOLKITS>
+	<UIMA_FRAMEWORK>
+	</UIMA_FRAMEWORK>
+	<SUBMITTED_COMPONENT>
+		<ID>com.mata.genanno.MAXAnno</ID>
+		<NAME>MAXAnno</NAME>
+		<DESC>C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/desc/lw_PosRule.xml</DESC>
+		<DEPLOYMENT>standard</DEPLOYMENT>
+		<SERVICE_COMMAND></SERVICE_COMMAND>
+		<SERVICE_WORKING_DIR></SERVICE_WORKING_DIR>
+		<SERVICE_COMMAND_ARGS>
+		</SERVICE_COMMAND_ARGS>
+		<COMMENTS>Studio Annotator created by IBM Content Analytics Studio 8.0.0.0 (Build id: 201302191513)</COMMENTS>
+	</SUBMITTED_COMPONENT>
+	<INSTALLATION>
+		<PROCESS>
+			<ACTION>set_env_variable</ACTION>
+			<PARAMETERS>
+				<COMMENTS>Resources Data Path</COMMENTS>
+				<VAR_VALUE>C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/resources/</VAR_VALUE>
+				<VAR_NAME>uima.datapath</VAR_NAME>
+			</PARAMETERS>
+		</PROCESS>
+		<PROCESS>
+			<ACTION>set_env_variable</ACTION>
+			<PARAMETERS>
+				<COMMENTS>Class Path</COMMENTS>
+				<VAR_VALUE>C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/lib/dlt.jar;C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/lib/icu4j.jar;C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/lib/an_dlt.jar;C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/lib/jfst.jar;C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/lib/antlr-2.7.5.jar;C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/lib/com.ibm.dltj.FeatureNormalizers.jar;C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/lib/com.ibm.dltj.FeatureNormalizers-1.jar;C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/lib/com.ibm.dltj.FeatureNormalizers-2.jar;C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/lib/com.ibm.dltj.FeatureNormalizers-3.jar;C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/lib/com.ibm.dltj.FeatureNormalizers-4.jar;C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/lib/com.ibm.dltj.FeatureNormalizers-5.jar;C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/lib/com.ibm.dltj.FeatureNormalizers-6.jar;C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/lib/com.ibm.dltj.FeatureNormalizers-7.jar;C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/lib/com.ibm.dltj.FeatureNormalizers-8.jar;C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/lib/ReplaceString-9.jar;C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/lib/RemoveWord-10.jar;C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/lib/RemoveString-11.jar;C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/lib/DateFormatter-12.jar</VAR_VALUE>
+				<VAR_NAME>CLASSPATH</VAR_NAME>
+			</PARAMETERS>
+		</PROCESS>
+		<PROCESS>
+			<ACTION>find_and_replace_path</ACTION>
+			<PARAMETERS>
+				<COMMENTS>Actual location</COMMENTS>
+				<REPLACE_WITH>file:///C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/resources/</REPLACE_WITH>
+				<FILE>C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/desc/LangID0.xml</FILE>
+				<FIND_STRING>file:resources/</FIND_STRING>
+			</PARAMETERS>
+		</PROCESS>
+		<PROCESS>
+			<ACTION>find_and_replace_path</ACTION>
+			<PARAMETERS>
+				<COMMENTS>Actual location</COMMENTS>
+				<REPLACE_WITH>C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/resources/</REPLACE_WITH>
+				<FILE>C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/desc/LangID0.xml</FILE>
+				<FIND_STRING>../resources/</FIND_STRING>
+			</PARAMETERS>
+		</PROCESS>
+		<PROCESS>
+			<ACTION>find_and_replace_path</ACTION>
+			<PARAMETERS>
+				<COMMENTS>Actual location</COMMENTS>
+				<REPLACE_WITH>file:///C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/resources/</REPLACE_WITH>
+				<FILE>C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/desc/LWAnnotator1.xml</FILE>
+				<FIND_STRING>file:resources/</FIND_STRING>
+			</PARAMETERS>
+		</PROCESS>
+		<PROCESS>
+			<ACTION>find_and_replace_path</ACTION>
+			<PARAMETERS>
+				<COMMENTS>Actual location</COMMENTS>
+				<REPLACE_WITH>C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/resources/</REPLACE_WITH>
+				<FILE>C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/desc/LWAnnotator1.xml</FILE>
+				<FIND_STRING>../resources/</FIND_STRING>
+			</PARAMETERS>
+		</PROCESS>
+		<PROCESS>
+			<ACTION>find_and_replace_path</ACTION>
+			<PARAMETERS>
+				<COMMENTS>Actual location</COMMENTS>
+				<REPLACE_WITH>file:///C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/resources/</REPLACE_WITH>
+				<FILE>C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/desc/LWShallowParser3.xml</FILE>
+				<FIND_STRING>file:resources/</FIND_STRING>
+			</PARAMETERS>
+		</PROCESS>
+		<PROCESS>
+			<ACTION>find_and_replace_path</ACTION>
+			<PARAMETERS>
+				<COMMENTS>Actual location</COMMENTS>
+				<REPLACE_WITH>C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/resources/</REPLACE_WITH>
+				<FILE>C:/CAX/solr-4.9.0/example/solr/COLGROUP-DEV-MasterTemplate/peartemp/com.mata.genanno.MAXAnno/desc/LWShallowParser3.xml</FILE>
+				<FIND_STRING>../resources/</FIND_STRING>
+			</PARAMETERS>
+		</PROCESS>
+	</INSTALLATION>
+</COMPONENT_INSTALLATION_DESCRIPTOR>

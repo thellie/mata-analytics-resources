@@ -1,0 +1,23 @@
+<properties>
+<body>
+    <replacepostcontents></replacepostcontents>
+    <xpathpostcontents>.detail-artikel &gt; div:nth-child(1)</xpathpostcontents>
+  </body>
+  <source>
+    <crawlname>MediaIndonesia Banjir</crawlname>
+  </source>
+  <date>
+    <xpathdates>.detail-info &gt; span:nth-child(1)</xpathdates>
+    <dateformat>ddMMMMyyyy</dateformat>
+    <attribute/>
+    <replacedates>(.*?),</replacedates>
+  </date>
+  <user>
+    <xpathusers>.author &gt; b:nth-child(1)</xpathusers>
+    <replaceusers></replaceusers>
+  </user>
+  <header>
+    <replaceheader></replaceheader>
+    <xpathheader>.detail-title &gt; h1:nth-child(1)</xpathheader>
+  </header>
+</properties>

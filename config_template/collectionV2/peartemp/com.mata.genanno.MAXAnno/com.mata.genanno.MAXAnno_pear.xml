@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pearSpecifier xmlns="http://uima.apache.org/resourceSpecifier">
+    <pearPath>C:\CAX\solr-4.9.0\example\solr\COLGROUP-DEV-MasterTemplate\peartemp\com.mata.genanno.MAXAnno</pearPath>
+</pearSpecifier>
